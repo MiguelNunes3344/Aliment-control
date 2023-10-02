@@ -1,0 +1,25 @@
+<p>packed-list works!</p>
+<app-packed-details></app-packed-details>
+
+<div class="row">
+    <div class="col-12">
+        <input type="text" class="mb-2" [(ngModel)]="name">
+        <br>
+        <input type="text" class="mb-2" [(ngModel)]="description">
+        <button class="btn btn-success mb-2" (click)="getFoodName()">Nova Marmita</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <a href="#" class="list-group-item clearfix" *ngFor="let x of packages">
+            <div class="float-start">
+                <h4 class="list-group-item-heading" >{{x.name}}</h4>
+                <p class="list-group-item-text">{{x.description}}</p>
+                
+            </div>
+            <div class="float-end">
+                <img src="#" alt="" class="img-responsive" style="max-height:50px;">
+            </div>
+        </a>
+    </div>
+</div>
